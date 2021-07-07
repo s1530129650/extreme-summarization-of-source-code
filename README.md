@@ -1,4 +1,10 @@
 # A Convolutional Attention Network for Extreme Summarization of Source Code
+# env config
+
+    conda create -n canes python=3.6 -y
+    conda activate canes
+    conda install pytorch-gpu
+    pip install torchtext==0.2.3
 
 Implementation of [A Convolutional Attention Network for Extreme Summarization of Source Code](https://arxiv.org/abs/1602.03001) in PyTorch using TorchText
 
