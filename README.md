@@ -1,8 +1,8 @@
 # A Convolutional Attention Network for Extreme Summarization of Source Code
 # env config
 
-    conda create -n canes python=3.6 -y
-    conda activate canes
+    conda create -n conv_cs python=3.6 -y
+    conda activate conv_cs
     conda install pytorch-gpu
     pip install torchtext==0.2.3
     conda install numpy
