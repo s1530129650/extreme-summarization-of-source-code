@@ -20,9 +20,15 @@ yes | bash install_env.sh
 
 ### Training inner project
 
-CUDA_VISIBLE_DEVICES=$4 python run_conv.py --project cassandra --seed 0 2>&1 |tee log/cassandra_res.txt
+    CUDA_VISIBLE_DEVICES=$4 python run_conv.py --project cassandra --seed 0 2>&1 |tee log/cassandra_res.txt
 
 ### Training inner project
+
+
+### csn
+
+    CUDA_VISIBLE_DEVICES=6 python run_conv.py --project csn --seed 0  --batch_size 64   --min_freq 100  2>&1 |tee log/csn_res.txt
+
 
 CUDA_VISIBLE_DEVICES=6 python run_conv.py --project csn --seed 0 2>&1 |tee log/csn_res.txt
 
