@@ -20,6 +20,7 @@ yes | bash install_env.sh
 
 ### Training inner project
 
+CUDA_VISIBLE_DEVICES=$4 python run_copy.py --project cassandra --seed 0 2>&1 |tee log/cassandra_res.txt
 
 ### Training inner project
 
@@ -40,3 +41,29 @@ To use:
 1. `python run_conv.py` to run the Convolutional Attention Model with default parameters
 
 Use `python run_conv.py -h` to see all the parameters that can be changed, e.g. to run the model on a different Java project within the dataset, use: `python run_conv.py --project {project name}`.
+
+
+    ptional arguments:
+      -h, --help            show this help message and exit
+      --project PROJECT     Which project to run on (default: cassandra)
+      --data_dir DATA_DIR   Where to find the training data (default: data)
+      --checkpoints_dir CHECKPOINTS_DIR
+                            Where to save the model checkpoints (default:
+                            checkpoints)
+      --no_cuda             Use this flag to stop using the GPU (default: False)
+      --min_freq MIN_FREQ   Minimum times a token must appear in the dataset to
+                            not be unk'd (default: 2)
+      --batch_size BATCH_SIZE
+      --emb_dim EMB_DIM
+      --k1 K1
+      --k2 K2
+      --w1 W1
+      --w2 W2
+      --w3 W3
+      --dropout DROPOUT
+      --clip CLIP
+      --epochs EPOCHS
+      --seed SEED
+      --load                Use this to load model parameters, parameters should
+                            be saved as: {checkpoints_dir}/{project name}-conv-
+                            model.pt (default: False)

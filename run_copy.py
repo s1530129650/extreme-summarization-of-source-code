@@ -141,7 +141,7 @@ def train(model, iterator, optimizer, clip):
                     predicted.append(bodies[copied_token_position, ex].item())
                 else:
                     predicted.append(vocab_preds[n,ex].item())
-            _precision, _recall, _f1 = utils.token_precision_recall(predicted, actual, unk_idx)
+            _precision, _recall, _f1 = utils.token_precision_recall(predicted, actual, unk_idx, pad_idx)
             precision += _precision
             recall += _recall
             f1 += _f1
