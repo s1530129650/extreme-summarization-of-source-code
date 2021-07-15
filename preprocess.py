@@ -1,12 +1,14 @@
 import json
 import os
 
-DATA_DIR = 'data/json/'
+
 
 START_TOKEN = '<title_start>'
 END_TOKEN = '<title_end/>'
-
-PROJECTS = ['cassandra', 'elasticsearch', 'gradle', 'hadoop-common', 'hibernate-orm', 'intellij-community', 'libgdx', 'liferay-portal', 'presto', 'spring-framework', 'wildfly']
+# DATA_DIR = 'data/json/'
+# PROJECTS = ['cassandra', 'elasticsearch', 'gradle', 'hadoop-common', 'hibernate-orm', 'intellij-community', 'libgdx', 'liferay-portal', 'presto', 'spring-framework', 'wildfly']
+DATA_DIR = 'data/other/'
+PROJECTS = ['csn']
 
 def files_to_data(DIR, FILE):
     """
