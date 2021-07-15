@@ -1,5 +1,5 @@
 # A Convolutional Attention Network for Extreme Summarization of Source Code
-# env config
+## Env config
 
     conda create -n conv_cs python=3.6 -y
     conda activate conv_cs
@@ -7,6 +7,25 @@
     pip install torchtext==0.2.3
     conda install numpy
     pip install six
+ 
+or
+
+```
+yes | bash install_env.sh
+```
+
+## Data preprocessing
+
+## Training
+
+### Training inner project
+
+
+### Training inner project
+
+
+
+# ------------------- old readme-------------------
     
 Implementation of [A Convolutional Attention Network for Extreme Summarization of Source Code](https://arxiv.org/abs/1602.03001) in PyTorch using TorchText
 
