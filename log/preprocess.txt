@@ -1,0 +1,33 @@
+Project: cassandra
+Training examples: 11490
+Testing examples: 8633
+Project: elasticsearch
+Training examples: 15330
+Testing examples: 6808
+Project: gradle
+Training examples: 11860
+Testing examples: 5591
+Project: hadoop-common
+Training examples: 25864
+Testing examples: 10615
+Project: hibernate-orm
+Training examples: 17950
+Testing examples: 7622
+Project: intellij-community
+Training examples: 126365
+Testing examples: 50240
+Project: libgdx
+Training examples: 11490
+Testing examples: 5756
+Project: liferay-portal
+Training examples: 70389
+Testing examples: 32666
+Project: presto
+Training examples: 8584
+Testing examples: 3832
+Project: spring-framework
+Training examples: 23372
+Testing examples: 10438
+Project: wildfly
+Training examples: 12365
+Testing examples: 5626
