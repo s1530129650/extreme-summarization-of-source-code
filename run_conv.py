@@ -19,7 +19,7 @@ parser.add_argument('--project', default='cassandra', type=str, help='Which proj
 parser.add_argument('--data_dir', default='data', type=str, help='Where to find the training data')
 parser.add_argument('--checkpoints_dir', default='checkpoints', type=str, help='Where to save the model checkpoints')
 parser.add_argument('--no_cuda', action='store_true', help='Use this flag to stop using the GPU')
-parser.add_argument('--min_freq', default=2, help='Minimum times a token must appear in the dataset to not be unk\'d')
+parser.add_argument('--min_freq', default=2,type=int, help='Minimum times a token must appear in the dataset to not be unk\'d')
 parser.add_argument('--batch_size', default=64, type=int)
 parser.add_argument('--emb_dim', default=128, type=int)
 parser.add_argument('--k1', default=8, type=int)
