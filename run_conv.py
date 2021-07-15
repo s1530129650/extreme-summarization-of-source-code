@@ -81,6 +81,7 @@ vocab_size = len(BODY.vocab)
 pad_idx = BODY.vocab.stoi['<pad>']
 unk_idx = BODY.vocab.stoi['<unk>']
 
+print("vocab_size ",vocab_size )
 #initialize model
 model = models.ConvAttentionNetwork(vocab_size, args.emb_dim, args.k1, args.k2, args.w1, args.w2, args.w3, args.dropout, pad_idx)
 

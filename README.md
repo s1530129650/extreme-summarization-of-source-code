@@ -22,7 +22,14 @@ yes | bash install_env.sh
 
     CUDA_VISIBLE_DEVICES=$4 python run_conv.py --project cassandra --seed 0 2>&1 |tee log/cassandra_res.txt
 
-### Training inner project
+
+|  poject  |  onv_attn(this repo)  | conv_attn (paper)    | copy_attn (paper)    |
+| :--------- | :------: | :------: |:------: |
+|cassandra|50.6 |46.5|48.1|
+
+
+
+
 
 
 ### csn
