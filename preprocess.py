@@ -19,7 +19,7 @@ def files_to_data(DIR, FILE):
     with open(os.path.join(DIR, FILE), 'r') as r:
         project = json.load(r)
         for method in project:
-            assert type(method['filename']) is str
+            # assert type(method['filename']) is str
             assert type(method['name']) is list
             assert type(method['tokens']) == list
             method_name = [START_TOKEN] + method['name'] + [END_TOKEN] #add start and end of sequence token to method name
