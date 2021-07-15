@@ -124,13 +124,13 @@ def train(model, iterator, optimizer, criterion, clip):
 
         #calculate precision, recall and f1
         #this is probably very inefficient
-        for ex in range(examples):
-            actual = [n.item() for n in names[:,ex][1:]]
-            predicted = [p.item() for p in preds[:,ex][1:]]
-            _precision, _recall, _f1 = utils.token_precision_recall(predicted, actual, unk_idx, pad_idx)
-            precision += _precision
-            recall += _recall
-            f1 += _f1
+        # for ex in range(examples):
+        #     actual = [n.item() for n in names[:,ex][1:]]
+        #     predicted = [p.item() for p in preds[:,ex][1:]]
+        #     _precision, _recall, _f1 = utils.token_precision_recall(predicted, actual, unk_idx, pad_idx)
+        #     precision += _precision
+        #     recall += _recall
+        #     f1 += _f1
 
         #calculate loss
         loss = criterion(output[1:].view(-1, output.shape[2]), names[1:].view(-1))
@@ -174,13 +174,13 @@ def evaluate(model, iterator, criterion):
             examples = names.shape[1]
             n_examples += examples
 
-            for ex in range(examples):
-                actual = [n.item() for n in names[:,ex][1:]]
-                predicted = [p.item() for p in preds[:,ex][1:]]
-                _precision, _recall, _f1 = utils.token_precision_recall(predicted, actual, unk_idx, pad_idx)
-                precision += _precision
-                recall += _recall
-                f1 += _f1
+            # for ex in range(examples):
+            #     actual = [n.item() for n in names[:,ex][1:]]
+            #     predicted = [p.item() for p in preds[:,ex][1:]]
+            #     _precision, _recall, _f1 = utils.token_precision_recall(predicted, actual, unk_idx, pad_idx)
+            #     precision += _precision
+            #     recall += _recall
+            #     f1 += _f1
 
             loss = criterion(output[1:].view(-1, output.shape[2]), names[1:].view(-1))
 

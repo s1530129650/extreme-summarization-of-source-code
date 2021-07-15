@@ -31,7 +31,7 @@ def files_to_data(DIR, FILE):
                 self_idx = method_body.index('%self%')
                 method_body = method_body[:self_idx] + method['name'] + method_body[self_idx+1:]
        
-            data.append({'name': method_name, 'body': method_body})
+            data.append({'name': method_name[:13], 'body': method_body[:100]})
 
     return data
 
